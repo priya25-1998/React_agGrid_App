@@ -23,55 +23,60 @@ function App() {
 
   const [columnDefs] = useState([
     {
-      field: "LoB",
+      field: "LOB",
       headerName: "LOB",
       chartDataType: "category",
       checkboxSelection: true,
       headerCheckboxSelection: true,
       filter: "agSetColumnFilter",
-      tooltipField: "LoB",
+      tooltipField: "LOB",
       rowDrag: true,
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 200,
       //aggFunc: 'count'
     },
     {
-      field: "ControlID",
+      field: "Control ID",
       chartDataType: "category",
       filter: true,
-      tooltipField: "ControlID",
+      tooltipField: "Control ID",
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 200,
       //aggFunc: 'count'
     },
     {
-      field: "ControlName",
-      tooltipField: "ControlName",
+      field: "Control Name",
+      tooltipField: "Control Name",
       chartDataType: "category",
       filter: true,
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 500,
       //aggFunc: 'count'
     },
     {
-      field: "CurrentTestFrequency",
+      field: "Current Test Frequency",
       chartDataType: "category",
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 100,
       //aggFunc: 'count'
     },
     {
-      field: "RecommendationAction",
+      field: "Recommendation Action",
       chartDataType: "category",
       filter: true,
-      tooltipField: "RecommendationAction",
+      tooltipField: "Recommendation Action",
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 100,
       //aggFunc: 'count'
     },
     {
@@ -82,6 +87,7 @@ function App() {
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 100,
       //aggFunc: 'count',
       cellStyle: (params) => {
         if (params.value === "Re-test") {
@@ -145,6 +151,7 @@ function App() {
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 100,
       //aggFunc: 'count'
     },
     {
@@ -154,6 +161,7 @@ function App() {
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 500,
       //aggFunc: 'count'
     },
     {
@@ -164,6 +172,7 @@ function App() {
       enablePivot:true,
       filter: true,
       enableValue: true,
+      //width: 200,
       //aggFunc: 'count',
       /*cellStyle: (params) => {
         if (params.value === "Issue Detected") {
@@ -175,19 +184,20 @@ function App() {
       },*/
     },
     {
-      field: "ControlTestCount",
+      field: "Control Test Count",
       chartDataType: "series",
-      tooltipField: "ControlTestCount",
+      tooltipField: "Control Test Count",
       enableRowGroup: true,
       enablePivot:true,
       enableValue: true,
+      //width: 200,
       //aggFunc: 'count'
     },
   ]);
 
   useEffect(() => {
     const object_URL =
-      "https://ms-optimizer.s3.us-east-2.amazonaws.com/Sample/test_plan_recommendations.csv";
+      "https://ms-optimizer.s3.us-east-2.amazonaws.com/Sample/OptimizationStrategy.csv";
     fetch(object_URL)
       .then((response) => response.text())
       .then((csvData) => {
@@ -218,8 +228,8 @@ function App() {
   const defaultColDef = useMemo(() => {
     return {
       sortable: true,
-      flex: 1,
-      minWidth: 220,
+      //flex: 1,
+      //minWidth: 220,
       resizable: true,
       floatingFilter: true,
       enablePivot: true,
