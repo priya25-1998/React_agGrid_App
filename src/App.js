@@ -7,8 +7,7 @@ import { useState, useEffect, useMemo } from "react";
 import "ag-grid-enterprise";
 import { LicenseManager } from "ag-grid-enterprise";
 LicenseManager.setLicenseKey(
-  "MTY5MDc1ODAwMDAwMA==f7deb9985cb10bc1921d8a43ac3c1b44"
-);
+  "CompanyName=SYSTEM,LicensedApplication=Trial Support - July,LicenseType=SingleApplication,LicensedConcurrentDeveloperCount=-1,LicensedProductionInstancesCount=0,AssetReference=AG-043118,SupportServicesEnd=31_July_2023_[v2]_MTY5MDc1ODAwMDAwMA==f7deb9985cb10bc1921d8a43ac3c1b44");
 
 function App() {
   // Define all the static variables
